@@ -51,9 +51,7 @@ def train_neural_network(x):
     hm_epochs = 10
     with tf.Session() as sess:
         summary_writer = tf.summary.FileWriter('/path/to/logs', sess.graph)        
-        #summary_writer = tf.summary.FileWriter(FLAGS.log_dir, sess.graph) ###
-
-        #sess.run(tf.initialize_all_variables())
+        
         sess.run(tf.global_variables_initializer())
 
         for epoch in range(hm_epochs):
@@ -74,3 +72,5 @@ def train_neural_network(x):
             
 
 train_neural_network(x)
+
+#sub1
