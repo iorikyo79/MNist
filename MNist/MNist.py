@@ -25,7 +25,7 @@ with tf.name_scope('Accuracy'):
 
 #sess = tf.InteractiveSession()
 init = tf.global_variables_initializer()
-
+ 
 tf.summary.scalar('loss', cross_entropy)
 tf.summary.scalar('accuracy', accuracy)
 merged_summary_op = tf.summary.merge_all()
@@ -41,3 +41,4 @@ with tf.Session() as sess:
         summary_writer.add_summary(summary, i)
 
     print(sess.run(accuracy, feed_dict={x: mnist.test.images, y_: mnist.test.labels}))
+ 
